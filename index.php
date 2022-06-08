@@ -15,8 +15,12 @@
             <div class="logo">
                 <img src="img/logo.png" alt="logo">
             </div>
-            <div class="menu-bar">
-                
+            <div class="menu-box">
+                <div class="menu-bar">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact us</a>
+                </div>
             </div>
             <div class="profile-box">
                 <img src="img/profile.png" alt="profile">

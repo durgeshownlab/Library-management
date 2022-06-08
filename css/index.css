@@ -29,6 +29,7 @@
     flex-direction: row;
 }
 
+/* code for the logo is started from here  */
 .logo
 {
     width: 10%;
@@ -47,13 +48,19 @@
     height: 100%;
 }
 
-.menu-bar
+
+.menu-box
 {
     width: 80%;
     height: 100%;
     border: 2px solid rgb(26, 151, 189);
+    display: flex;
+    flex-direction: row;
+    justify-content: row;
+    align-items: center;
 }
 
+/* code for profile is started from here  */
 .profile-box
 {
     width: 10%;
