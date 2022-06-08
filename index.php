@@ -32,12 +32,19 @@
         </div>
 
         <!-- code for welcome screen is stat from here -->
+
         <div class="welcome-box">
             <div class="welcome-page">
                 <h2>Manage your Library from remote area</h2>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, dolorum ipsum. Nisi impedit quidem saepe vero eos dolorem nesciunt! Porro illum voluptas aspernatur harum quaerat. Dolor eius molestiae temporibus. Labore, libero consequatur?</p>
                 <button>Get Started</button>
             </div>
+        </div>
+
+        <!-- code for service area  -->
+
+        <div class="services">
+            
         </div>
     </div>
 </body>
