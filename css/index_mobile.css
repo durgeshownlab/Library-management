@@ -1,0 +1,92 @@
+:root
+{
+    --primary: #8A0FB6;
+}
+
+@media screen and (max-width: 750px)
+{
+    *
+    {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    .navbar
+    {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .logo-menu-toggle
+    {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu-profile-box
+    {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        display: none;
+    }
+
+    .menu-box
+    {
+        width: 100%;
+        height: 50px;
+    }
+
+    .profile-box
+    {
+        width: 100%;
+        height: 50px;
+        justify-content: space-around;
+    }
+
+    .logo
+    {
+        width: 50%;
+        justify-content: left;
+        margin-left: 10px;
+    }
+
+    .toggle-box
+    {
+        width: 50%;
+        height: 100%;
+        padding-right: 10px;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        /* border: 1px solid red; */
+    }
+
+    .toggle-btn
+    {
+        width: 40px;
+        height: 80%;
+        background-color: #fff;
+        color: var(--primary);
+        border: 2px solid var(--primary);
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    .toggle-btn:hover
+    {
+        background-color: var(--primary);
+        color: #fff;
+        border: 1px solid var(--primary);
+        border-radius: 3px;
+    }
+
+    .toggle-btn i
+    {
+        font-size: 25px;
+    }
+}
