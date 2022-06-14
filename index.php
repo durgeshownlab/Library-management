@@ -56,15 +56,122 @@
             <div class="welcome-page">
                 <h2>Manage your Library from remote area</h2>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, dolorum ipsum. Nisi impedit quidem saepe vero eos dolorem nesciunt! Porro illum voluptas aspernatur harum quaerat. Dolor eius molestiae temporibus. Labore, libero consequatur?</p>
-                <button>Get Started</button>
+                <button><a href="#services-heading-id">Get Started</a></button>
             </div>
         </div>
 
         <!-- code for service area  -->
 
-        <div class="services">
-            
+        <div class="services-container">
+            <div class="services-heading" id="services-heading-id">
+                <h1>Services</h1>
+            </div>
+            <div class="services-cards-container">
+
+                <!-- code for card 1 -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="img/books1.jpg">
+                    </div>
+                    <div class="card-title">
+                        <h3>Manage Books</h3>
+                    </div>
+                    <div class="card-desc">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, eum ipsum. Eius quos eaque voluptatem perfere</p>
+                    </div>
+                    <div class="card-btn">
+                        <button>click</button>
+                    </div>
+                </div>
+
+                <!-- code for card 1 -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="img/books1.jpg">
+                    </div>
+                    <div class="card-title">
+                        <h3>Manage Books</h3>
+                    </div>
+                    <div class="card-desc">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, eum ipsum. Eius quos eaque voluptatem perfere</p>
+                    </div>
+                    <div class="card-btn">
+                        <button>click</button>
+                    </div>
+                </div>
+
+                <!-- code for card 1 -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="img/books1.jpg">
+                    </div>
+                    <div class="card-title">
+                        <h3>Manage Books</h3>
+                    </div>
+                    <div class="card-desc">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, eum ipsum. Eius quos eaque voluptatem perfere</p>
+                    </div>
+                    <div class="card-btn">
+                        <button>click</button>
+                    </div>
+                </div>
+
+                <!-- code for card 1 -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="img/books1.jpg">
+                    </div>
+                    <div class="card-title">
+                        <h3>Manage Books</h3>
+                    </div>
+                    <div class="card-desc">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, eum ipsum. Eius quos eaque voluptatem perfere</p>
+                    </div>
+                    <div class="card-btn">
+                        <button>click</button>
+                    </div>
+                </div>
+
+                <!-- code for card 1 -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="img/books1.jpg">
+                    </div>
+                    <div class="card-title">
+                        <h3>Manage Books</h3>
+                    </div>
+                    <div class="card-desc">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, eum ipsum. Eius quos eaque voluptatem perfere</p>
+                    </div>
+                    <div class="card-btn">
+                        <button>click</button>
+                    </div>
+                </div>
+
+                <!-- code for card 1 -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="img/books1.jpg">
+                    </div>
+                    <div class="card-title">
+                        <h3>Manage Books</h3>
+                    </div>
+                    <div class="card-desc">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, eum ipsum. Eius quos eaque voluptatem perfere</p>
+                    </div>
+                    <div class="card-btn">
+                        <button>click</button>
+                    </div>
+                </div>
+            </div>
         </div>
+
+
+        <!-- code for footer are  -->
+        <div class="footer-box">
+
+        </div>
+
     </div>
 
     <!-- code for javascript -->
