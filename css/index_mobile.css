@@ -89,4 +89,36 @@
     {
         font-size: 25px;
     }
+
+    /* css code for mobile view  */
+
+    .footer-container
+    {
+        width: 100vw;
+        height: 120px;
+    }
+    .footer-box
+    {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .footer-text
+    {
+        width: 100%;
+        height: 45%;
+    }
+
+    .footer-text p
+    {
+        text-align: center;
+    }
+
+    .social-media-box
+    {
+        width: 100%;
+        height: 45%;
+    }
 }

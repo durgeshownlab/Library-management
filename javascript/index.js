@@ -15,3 +15,9 @@ function menuToggle()
     }
     console.log("button clicked");
 }
+
+function hideWelcome()
+{
+    const welcome=document.querySelector(".welcome-box");
+    welcome.style.display="none";
+}

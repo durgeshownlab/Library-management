@@ -8,7 +8,22 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: Ubuntu;
     scroll-behavior: smooth;
+}
+
+.loading
+{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: var(--primary);
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
 }
 
 .container
@@ -429,11 +444,213 @@
     transition-duration: 0.5s;
 }
 
+/* css code for dialog modal  */
+
+.dialog-box-container
+{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.dialog-box-title-bar
+{
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(92, 42, 133, 0.801);
+}
+
+.dialog-title-box
+{
+    width: 50%;
+    height: 100%;
+    /* border: 1px solid #fff; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog-title-box h3
+{
+    color: var(--primary);
+}
+
+.hide-btn-box
+{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    padding-right: 10px;
+    align-items: center;
+    /* border: 1px solid #fff; */
+}
+
+.hide-btn-box button
+{
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    border: 1px solid var(--primary);
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.hide-btn-box button:hover
+{
+    border: 1px solid var(--primary);
+    border-radius: 50%;
+    background-color: #fff;
+    color: var(--primary);
+}
+
+.hide-btn-box button i
+{
+    font-size: 30px;
+} 
+
+.dialog-form-box
+{
+    width: 100%;
+    height: calc(100vh-50px);
+    border: 2px solid red;
+    overflow-x: auto;
+}
+
 /* css code for footer part  */
+
+.footer-container
+{
+    width: 100%;
+    height: 50px;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #39224b;
+}
 
 .footer-box
 {
     width: 100%;
-    height: 100px;
-    border: 2px solid red;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-text
+{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Ubuntu;
+    color: #fff;
+}
+
+.social-media-box
+{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.social-media-icon-box
+{
+    width:40px;
+    height: 40px;
+    /* border: 2px solid red; */
+    border-radius: 50%;
+    margin: 0px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgb(145, 145, 145);
+}
+
+/* .social-media-icon-box::before
+{
+    content: "";
+    height: 45px;
+    width: 45px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+} */
+
+.social-media-icon-box a i
+{
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgb(179, 178, 178) inset;
+}
+
+.social-media-icon-box a
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.social-media-icon-box a .icon-insta
+{
+    color: #C833B3;
+}
+.social-media-icon-box a .icon-face
+{
+    color: #2e5cbf;
+}
+.social-media-icon-box a .icon-twit
+{
+    color: #1da1f2;
+}
+
+.social-media-icon-box a .icon-insta:hover
+{
+    background-color: #C833B3;
+    color: #fff;
+    box-shadow: 0 0 5px rgb(179, 178, 178) inset;
+}
+.social-media-icon-box a .icon-face:hover
+{
+    background-color: #2e5cbf;
+    color: #fff;
+    box-shadow: 0 0 5px rgb(179, 178, 178) inset;
+}
+.social-media-icon-box a .icon-twit:hover
+{
+    background-color: #1da1f2;
+    color: #fff;
+    box-shadow: 0 0 5px rgb(179, 178, 178) inset;
 }
