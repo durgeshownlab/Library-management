@@ -94,7 +94,7 @@
 
     .footer-container
     {
-        width: 100vw;
+        width: 100%;
         height: 120px;
     }
     .footer-box
@@ -120,5 +120,34 @@
     {
         width: 100%;
         height: 45%;
+    }
+
+    /* code for dialog box in mobile view  */
+
+    .dialog-box-heading-form
+    {
+        width: 95%;
+        height: 95%;
+    }
+
+    .input-group
+    {
+        width: 100%;
+        height: 80px;
+        min-height: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .name, .fname, .dob, .regNo, .course, .branch, .profile, .submit-btn, .reset-btn
+    {
+        width: 80%;
+        height: 40%;
+    }
+    
+    .profile input[type=file]
+    {
+        line-height: 30px;
     }
 }

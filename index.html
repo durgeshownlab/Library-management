@@ -70,84 +70,92 @@
                 <h1>Services</h1>
             </div>
             <div class="services-cards-container" id="services-cards-container-id">
+                <!-- <div class="back-btn-container">
+                    <button>
+                        <i class="fa fa-arrow-left"></i>
+                        <span>&nbsp;Back</span>
+                    </button>
+                </div> -->
 
-                <!-- code for card 1 -->
-                <div class="card">
-                    <div class="card-image">
-                        <img src="img/books1.jpg">
+                <div class="services-main-cards-container">
+                    <!-- code for card 1 -->
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/books1.jpg">
+                        </div>
+                        <div class="card-title">
+                            <h3>Manage Students</h3>
+                        </div>
+                        <div class="card-desc">
+                            <p>Manage your Students like Add, Remove, or Update Student details </p>
+                        </div>
+                        <div class="card-btn">
+                            <button id="manage-student-id">Manage</button>
+                        </div>
                     </div>
-                    <div class="card-title">
-                        <h3>Manage Students</h3>
-                    </div>
-                    <div class="card-desc">
-                        <p>Manage your Students like Add, Remove, or Update Student details </p>
-                    </div>
-                    <div class="card-btn">
-                        <button id="manage-student-id">Manage</button>
-                    </div>
-                </div>
 
-                <!-- code for card 1 -->
-                <div class="card">
-                    <div class="card-image">
-                        <img src="img/books1.jpg">
+                    <!-- code for card 1 -->
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/books1.jpg">
+                        </div>
+                        <div class="card-title">
+                            <h3>Manage Books</h3>
+                        </div>
+                        <div class="card-desc">
+                            <p>Manage your books like Add, Remove, or Update books details </p>
+                        </div>
+                        <div class="card-btn">
+                            <button id="manage-books-id">Manage</button>
+                        </div>
                     </div>
-                    <div class="card-title">
-                        <h3>Manage Books</h3>
-                    </div>
-                    <div class="card-desc">
-                        <p>Manage your books like Add, Remove, or Update books details </p>
-                    </div>
-                    <div class="card-btn">
-                        <button id="manage-books-id">Manage</button>
-                    </div>
-                </div>
 
-                <!-- code for card 1 -->
-                <div class="card">
-                    <div class="card-image">
-                        <img src="img/books1.jpg">
+                    <!-- code for card 1 -->
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/books1.jpg">
+                        </div>
+                        <div class="card-title">
+                            <h3>Issue Books</h3>
+                        </div>
+                        <div class="card-desc">
+                            <p>Issue the books to the students for his references</p>
+                        </div>
+                        <div class="card-btn">
+                            <button id="issue-books-id">Issue</button>
+                        </div>
                     </div>
-                    <div class="card-title">
-                        <h3>Issue Books</h3>
-                    </div>
-                    <div class="card-desc">
-                        <p>Issue the books to the students for his references</p>
-                    </div>
-                    <div class="card-btn">
-                        <button id="issue-books-id">Issue</button>
-                    </div>
-                </div>
 
-                <!-- code for card 1 -->
-                <div class="card">
-                    <div class="card-image">
-                        <img src="img/books1.jpg">
+                    <!-- code for card 1 -->
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/books1.jpg">
+                        </div>
+                        <div class="card-title">
+                            <h3>View Issued Books</h3>
+                        </div>
+                        <div class="card-desc">
+                            <p>Here you can see that which book is ocupied by which students</p>
+                        </div>
+                        <div class="card-btn">
+                            <button id="view-issued-books-id">View</button>
+                        </div>
                     </div>
-                    <div class="card-title">
-                        <h3>View Issued Books</h3>
-                    </div>
-                    <div class="card-desc">
-                        <p>Here you can see that which book is ocupied by which students</p>
-                    </div>
-                    <div class="card-btn">
-                        <button id="view-issued-books-id">View</button>
-                    </div>
-                </div>
 
-                <!-- code for card 1 -->
-                <div class="card">
-                    <div class="card-image">
-                        <img src="img/books1.jpg">
-                    </div>
-                    <div class="card-title">
-                        <h3>Return Books</h3>
-                    </div>
-                    <div class="card-desc">
-                        <p>Return back the books from students and make it available for other students.</p>
-                    </div>
-                    <div class="card-btn">
-                        <button id="return-books-id">Return</button>
+                    <!-- code for card 1 -->
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/books1.jpg">
+                        </div>
+                        <div class="card-title">
+                            <h3>Return Books</h3>
+                        </div>
+                        <div class="card-desc">
+                            <p>Return back the books from students and make it available for other students.</p>
+                        </div>
+                        <div class="card-btn">
+                            <button id="return-books-id">Return</button>
+                        </div>
                     </div>
                 </div>
 
@@ -157,20 +165,19 @@
         <!-- code for dialog modal -->
 
         <div class="dialog-box-container">
-            <div class="dialog-box-title-bar">
-                <div class="dialog-title-box">
-                    <h3>Add Student</h3>
+            <div class="dialog-box-heading-form">
+                <div class="dialog-box-title-bar">
+                    <div class="dialog-title-box">
+                        <h3>Add Student</h3>
+                    </div>
+                    <div class="hide-btn-box">
+                        <button onclick="hideDialog()">
+                            <i class="fa fa-close"></i>
+                        </button>
+                    </div>
                 </div>
-                <div class="hide-btn-box">
-                    <button onclick="hideDialog()">
-                        <i class="fa fa-close"></i>
-                    </button>
-                </div>
-            </div>
+                <div class="dialog-form-box">
 
-            <div class="dialog-form-box">
-                <div class="dialog-form">
-                    
                 </div>
             </div>
         </div>
@@ -228,8 +235,23 @@
         }
 
         $(document).ready(function(){
-            $("#manage-student-id").on("click", function(e){
-                var data = 'cardId='+ 1;
+            $(".dialog-box-container").hide();
+
+            $(document).on("click", "#manage-student-id", function(e){
+                var data = 'cardId='+ 'manage-student-btn';
+                $.ajax({
+                    url: "cardHandling.php",
+                    type: "POST",
+                    data: data,
+                    success: function(data){
+                        $("#services-cards-container-id").html(data);
+
+                    }
+                });
+            });
+
+            $(document).on("click", "#manage-books-id", function(e){
+                var data = 'cardId='+ 'manage-book-btn';
                 $.ajax({
                     url: "cardHandling.php",
                     type: "POST",
@@ -240,17 +262,37 @@
                 });
             });
 
-            $("#manage-books-id").on("click", function(e){
-                var data = 'cardId='+ 2;
+            // ajax code for manage student 
+
+            $(document).on("click", "#add-student-btn-id" ,function(e){
+                var add_flex_css = {display: 'flex'};
+                $(".dialog-box-container").css(add_flex_css);
+                // console.log("s a btn clicked");
+                $(".dialog-box-container").show();
+                
+                var data = 'cardId='+ 'add-student-btn';
                 $.ajax({
-                    url: "cardHandling.php",
+                    url: "manageStudentEvent.php",
                     type: "POST",
                     data: data,
                     success: function(data){
-                        $("#services-cards-container-id").html(data);
+                        $(".dialog-form-box").html(data);
                     }
                 });
             });
+
+            // ajax code for back btn 
+            $(document).on("click", "#back-btn-id" ,function(e){
+
+                $.ajax({
+                    url: "homeCard.php",
+                    type: "POST",
+                    success: function(data){
+                        $(".services-cards-container").html(data);
+                    }
+                });
+            });
+
         });
 
 

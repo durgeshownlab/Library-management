@@ -339,9 +339,44 @@
     padding: 10px 40px;
     /* border: 2px solid rgb(1, 109, 197); */
     display: flex;
+    flex-direction: column;
+}
+
+.back-btn-container
+{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+.back-btn-container button
+{
+    width: auto;
+    height: 80%;
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 0px 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.services-main-cards-container
+{
+    width: 100%;
+    height: auto;
+    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
+
 }
 
 .card
@@ -444,90 +479,6 @@
     transition-duration: 0.5s;
 }
 
-/* css code for dialog modal  */
-
-.dialog-box-container
-{
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    z-index: 1;
-}
-
-.dialog-box-title-bar
-{
-    width: 100%;
-    height: 50px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid rgba(92, 42, 133, 0.801);
-}
-
-.dialog-title-box
-{
-    width: 50%;
-    height: 100%;
-    /* border: 1px solid #fff; */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.dialog-title-box h3
-{
-    color: var(--primary);
-}
-
-.hide-btn-box
-{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    padding-right: 10px;
-    align-items: center;
-    /* border: 1px solid #fff; */
-}
-
-.hide-btn-box button
-{
-    width: 45px;
-    height: 45px;
-    cursor: pointer;
-    border: 1px solid var(--primary);
-    border-radius: 50%;
-    background-color: var(--primary);
-    color: #fff;
-}
-
-.hide-btn-box button:hover
-{
-    border: 1px solid var(--primary);
-    border-radius: 50%;
-    background-color: #fff;
-    color: var(--primary);
-}
-
-.hide-btn-box button i
-{
-    font-size: 30px;
-} 
-
-.dialog-form-box
-{
-    width: 100%;
-    height: calc(100vh-50px);
-    border: 2px solid red;
-    overflow-x: auto;
-}
 
 /* css code for footer part  */
 
@@ -653,4 +604,228 @@
     background-color: #1da1f2;
     color: #fff;
     box-shadow: 0 0 5px rgb(179, 178, 178) inset;
+}
+
+/* css code for dialog modal  */
+    
+.dialog-box-container
+{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.575);
+    z-index: 1;
+}
+
+.dialog-box-heading-form
+{
+    width: 80%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    /* border: 2px solid green; */
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px rgb(0, 26, 255),
+                -5px -5px 20px rgb(174, 0, 255);
+}
+
+.dialog-box-title-bar
+{
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(92, 42, 133, 0.801);
+    box-shadow: 0px 5px 10px rgb(0, 26, 255);
+}
+
+.dialog-title-box
+{
+    width: 50%;
+    height: 100%;
+    /* border: 1px solid #fff; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog-title-box h3
+{
+    color: var(--primary);
+}
+
+.hide-btn-box
+{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    padding-right: 10px;
+    align-items: center;
+    /* border: 1px solid #fff; */
+}
+
+.hide-btn-box button
+{
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    border: 1px solid var(--primary);
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.hide-btn-box button:hover
+{
+    border: 1px solid var(--primary);
+    border-radius: 50%;
+    background-color: #fff;
+    color: var(--primary);
+}
+
+.hide-btn-box button i
+{
+    font-size: 30px;
+} 
+
+.dialog-form-box
+{
+    width: 100%;
+    height: calc(100vh-50px);
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    overflow-y: auto;
+}
+
+.dialog-form
+{
+    width: 100%;
+    height: fit-content;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.input-group
+{
+    width: 100%;
+    height: 50px;
+    min-height: 50px;
+    /* border: 1px solid rgb(5, 172, 184); */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.name, .fname, .dob, .regNo, .course, .branch, .profile, .address, .submit-btn, .reset-btn
+{
+    width: 40%;
+    height: 80%;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+} 
+
+.name input, .fname input, .dob input, .regNo input, .course select, .branch select, .profile input, .address input, .submit-btn input, .reset-btn input
+{
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+    outline: none;
+    color: var(--primary);
+    font-size: 16px;
+}
+
+.profile input[type='file']
+{
+    line-height: 37px;
+}
+
+.profile input[type=file]::-webkit-file-upload-button
+{
+    width: auto;
+    height: 80%;
+    border: 1px solid var(--primary);
+    background-color: #fff;
+    border-radius: 5px;
+    color: var(--primary);
+    cursor: pointer;
+    font-family: Ubuntu;
+
+}
+
+.profile input[type=file]::-webkit-file-upload-button:hover
+{
+    background-color: var(--primary);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-family: Ubuntu;
+}
+
+.submit-btn input[type='button']
+{
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: large;
+}
+
+.reset-btn input[type='reset']
+{
+    background-color: #fff;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    cursor: pointer;
+    font-size: large;
+}
+
+.name input::placeholder, .fname input::placeholder, .regNo input::placeholder, .address input::placeholder
+{
+    color: var(--primary);
+    opacity: 0.5;
+}
+
+.submit-btn input[type='button']:hover
+{
+    background-color: #fff;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    cursor: pointer;
+    font-size: large;
+}
+
+.reset-btn input[type='reset']:hover
+{
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: large;
 }
