@@ -140,7 +140,7 @@
         justify-content: space-evenly;
     }
 
-    .name, .fname, .dob, .regNo, .course, .branch, .profile, .submit-btn, .reset-btn
+    .name, .fname, .dob, .regNo, .mobile, .email, .course, .branch, .profile, .address, .submit-btn, .reset-btn
     {
         width: 80%;
         height: 40%;

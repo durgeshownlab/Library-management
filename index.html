@@ -282,6 +282,7 @@
             });
 
             // ajax code for back btn 
+
             $(document).on("click", "#back-btn-id" ,function(e){
 
                 $.ajax({
@@ -291,6 +292,35 @@
                         $(".services-cards-container").html(data);
                     }
                 });
+            });
+
+            // form add student form  code 
+
+            $(document).on("click", ".submit-btn" ,function(e){
+                var name=$("#name-id").val();
+                var fname=$("#fname-id").val();
+                var dob=$("#dob-id").val();
+                var regNo=$("#regNo-id").val();
+                var mobile=$("#mobile-id").val();
+                var email=$("#email-id").val();
+                var course=$("#course-id").val();
+                var branch=$("#branch-id").val();
+                var profile=$("#profile-id").val();
+                var address=$("#address-id").val();
+
+                var data = 'name='+ name + "&fname=" + fname + "&dob=" + dob + "&regNo=" + regNo + "&mobile=" + mobile + "&email=" + email + "&course=" + course + "&branch=" + branch + "&profile=" + profile + "&address=" + address;
+
+                $.ajax({
+                    url: "addStudent.php",
+                    type: "POST",
+                    data: data,
+                    success: function(data){
+                        // $(".dialog-form-box").html(data);
+                        console.log(data);
+                    }
+                });
+                
+                console.log(name, fname, dob, regNo, mobile, email, course, branch, profile, address);
             });
 
         });
