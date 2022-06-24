@@ -77,6 +77,14 @@
                     </div>
                 </form>';
     }
+    // for remove student form
+    else if($cardId=='remove-student-btn')
+    {
+        $output ='
+                <form class="dialog-form">
+                    <i class="fa fa-circle-o-notch fa-spin" style="color: red; font-size: 35px;"></i>
+                </form>';
+    }
 
     echo $output;
 

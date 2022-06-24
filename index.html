@@ -264,6 +264,7 @@
 
             // ajax code for manage student 
 
+            // add student code 
             $(document).on("click", "#add-student-btn-id" ,function(e){
                 var add_flex_css = {display: 'flex'};
                 $(".dialog-box-container").css(add_flex_css);
@@ -271,6 +272,24 @@
                 $(".dialog-box-container").show();
                 
                 var data = 'cardId='+ 'add-student-btn';
+                $.ajax({
+                    url: "manageStudentEvent.php",
+                    type: "POST",
+                    data: data,
+                    success: function(data){
+                        $(".dialog-form-box").html(data);
+                    }
+                });
+            });
+
+            // remove student code
+            $(document).on("click", "#remove-student-btn-id" ,function(e){
+                var add_flex_css = {display: 'flex'};
+                $(".dialog-box-container").css(add_flex_css);
+                // console.log("s a btn clicked");
+                $(".dialog-box-container").show();
+                
+                var data = 'cardId='+ 'remove-student-btn';
                 $.ajax({
                     url: "manageStudentEvent.php",
                     type: "POST",
@@ -294,6 +313,7 @@
                 });
             });
 
+            
             // form add student form  code 
 
             $(document).on("click", ".submit-btn" ,function(e){
@@ -308,19 +328,149 @@
                 var profile=$("#profile-id").val();
                 var address=$("#address-id").val();
 
-                var data = 'name='+ name + "&fname=" + fname + "&dob=" + dob + "&regNo=" + regNo + "&mobile=" + mobile + "&email=" + email + "&course=" + course + "&branch=" + branch + "&profile=" + profile + "&address=" + address;
+                //form validation part of the form add student
+                if (name=="") 
+                {
+                    alert("Name field can't be blank");
+                    return;
+                }
+                else if (name.length>=20) 
+                {
+                    alert("name sholud be less than 200 character");
+                    return;
+                }
+                else if (fname=="") 
+                {
+                    alert("father's name can't be blank");
+                    return;
+                }
+                else if (fname.length>=20) 
+                {
+                    alert("father's name sholud be less than 200 character");
+                    return;
+                }
+                else if (dob=="") 
+                {
+                    alert("please enter date of birth");
+                    return;
+                }
+                else if (regNo=="") 
+                {
+                    alert("please enter Registration no");
+                    return;
+                }
+                else if (regNo.length<10) 
+                {
+                    alert("please enter a valid registration number");
+                    return;
+                }
+                else if (regNo.length>10) 
+                {
+                    alert("please enter a valid registration number");
+                    return;
+                }
+                else if (mobile=="") 
+                {
+                    alert("please enter Mobile number");
+                    return;
+                }
+                else if(!/^[0-9]+$/.test(mobile))
+                {
+                    alert("please enter a valid mobile number");
+                    return;
+                }
+                else if (mobile.length<10) 
+                {
+                    alert("please enter a valid mobile number");
+                    return;
+                }
+                else if (mobile.length>10) 
+                {
+                    alert("please enter a valid mobile number");
+                    return;
+                }
+                else if (email=="") 
+                {
+                    alert("please enter email address");
+                    return;
+                }
+                else if (email.length>=200) 
+                {
+                    alert("Email address sholud be less than 200 character");
+                    return;
+                }
+                else if(!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)))
+                {
+                    alert("please enter a valid email address");
+                    return;
+                }
+                else if (course=="null") 
+                {
+                    alert("please select course");
+                    return;
+                }
+                else if (branch=="null") 
+                {
+                    alert("please select branch");
+                    return;
+                }
+                else if (course=="") 
+                {
+                    alert("please select course");
+                    return;
+                }
+                else if (branch=="") 
+                {
+                    alert("please select branch");
+                    return;
+                }
+                else if (address=="") 
+                {
+                    alert("please enter address");
+                    return;
+                }
+                else if (address.length>=500) 
+                {
+                    alert("Address sholud be less than 500 character");
+                    return;
+                }
+                // form validation end
+                else
+                {
+                    // ajax call 
+                    $.ajax({
+                        url: "addStudent.php",
+                        type: "POST",
+                        data: {name: name,
+                            fname: fname,
+                            dob: dob,
+                            regNo: name,
+                            mobile: mobile,
+                            email: email,
+                            course: course,
+                            branch: branch,
+                            profile: profile,
+                            address: address},
 
-                $.ajax({
-                    url: "addStudent.php",
-                    type: "POST",
-                    data: data,
-                    success: function(data){
-                        // $(".dialog-form-box").html(data);
-                        console.log(data);
-                    }
-                });
+                        success: function(data){
+                            // $(".dialog-form-box").html(data);
+                            alert(data)
+
+                            $("#name-id").val("");
+                            $("#fname-id").val("");
+                            $("#dob-id").val("");
+                            $("#regNo-id").val("");
+                            $("#mobile-id").val("");
+                            $("#email-id").val("");
+                            // $("#course-id").val("");
+                            // $("#branch-id").val("");
+                            $("#profile-id").val("");
+                            $("#address-id").val("");
+                        }
+                    });
+                }
                 
-                console.log(name, fname, dob, regNo, mobile, email, course, branch, profile, address);
+                //console.log(name, fname, dob, regNo, mobile, email, course, branch, profile, address);
             });
 
         });
