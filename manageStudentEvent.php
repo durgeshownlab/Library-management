@@ -5,7 +5,7 @@
     if($cardId=='add-student-btn')
     {
         $output ='
-                <form class="dialog-form">
+                <form class="dialog-form" enctype="multipart/form-data">
                     <div class="input-group">
                         <div class="name">
                             <input type="text" placeholder="Student\'s Name" id="name-id">
@@ -84,6 +84,10 @@
                 <form class="dialog-form">
                     <i class="fa fa-circle-o-notch fa-spin" style="color: red; font-size: 35px;"></i>
                 </form>';
+    }
+    else if($cardId=='view-student-btn')
+    {
+        $output ="this view only card";
     }
 
     echo $output;

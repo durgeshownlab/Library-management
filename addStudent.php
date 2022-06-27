@@ -7,26 +7,69 @@
     $email=$_POST['email'];
     $course=$_POST['course'];
     $branch=$_POST['branch'];
-    $profile=$_POST['profile'];
+    //$profile=$_FILES['profile']['name'];
     $address=$_POST['address'];
 
-    // $output=$name." ".$fname." ".$dob." ".$regNo." ".$mobile." ".$email." ".$course." ".$branch." ".$profile." ".$address;
+//   saving image into a profile img folder
+    $path="/img/profile_img/default_profile.png";
 
-    //INSERT INTO `student_details` (`s_id`, `s_name`, `f_name`, `reg_no`, `mob_no`, `email`, `course`, `branch`, `dob`, `address`, `profile`, `occupied_no_of_books`) VALUES ('1', 'durgesh', 'ashok singh', '192h1a05g3', '7667107173', 'durgesh@gmail.com', 'b.tech', 'cse', '2022-11-16', 'rtyrthdgdfgsdgsdfgdsgdsg', 'dfdsgsdgdfg', '1');
-
-    require("_dbconnect.php");
+    if(isset($_FILES['profile']['name']))
+    {
+        if($_FILES['profile']['name']!='')
+        {
+            $filename=$_FILES['profile']['name'];
+            $extension=pathinfo($filename, PATHINFO_EXTENSION);
+            $new_name=$regNo.".".$extension;
+            $path="img/profile_img/".$new_name;
+            if(move_uploaded_file($_FILES['profile']['tmp_name'], $path))
+            {
+                require("_dbconnect.php");
+                
+                $query="INSERT INTO `student_details` (`s_name`, `f_name`, `reg_no`, `mob_no`, `email`, `course`, `branch`, `dob`, `address`, `profile`,`entry_time`) VALUES ('$name', '$fname', '$regNo', '$mobile', '$email', '$course', '$branch', '$dob', '$address', '$path', CURRENT_TIMESTAMP);";
     
-    $query="INSERT INTO `student_details` (`s_name`, `f_name`, `reg_no`, `mob_no`, `email`, `course`, `branch`, `dob`, `address`, `profile`,`entry_time`) VALUES ('$name', '$fname', '$regNo', '$mobile', '$email', '$course', '$branch', '$dob', '$address', '$profile', CURRENT_TIMESTAMP);";
+                $result=mysqli_query($conn, $query);
+    
+                if ($result) {
+                    echo "successfully inserted";
+                }
+                else
+                {
+                    echo "not inserted";
+                }
+            }
+        }
+        else
+        {
+            require("_dbconnect.php");
+            
+            $query="INSERT INTO `student_details` (`s_name`, `f_name`, `reg_no`, `mob_no`, `email`, `course`, `branch`, `dob`, `address`, `profile`,`entry_time`) VALUES ('$name', '$fname', '$regNo', '$mobile', '$email', '$course', '$branch', '$dob', '$address', '$path', CURRENT_TIMESTAMP);";
 
-    $result=mysqli_query($conn, $query);
+            $result=mysqli_query($conn, $query);
 
-    if ($result) {
-        echo "successfully inserted";
+            if ($result) {
+                echo "successfully inserted";
+            }
+            else
+            {
+                echo "not inserted";
+            }
+        }
     }
     else
     {
-        echo "not inserted";
+        require("_dbconnect.php");
+            
+            $query="INSERT INTO `student_details` (`s_name`, `f_name`, `reg_no`, `mob_no`, `email`, `course`, `branch`, `dob`, `address`, `profile`,`entry_time`) VALUES ('$name', '$fname', '$regNo', '$mobile', '$email', '$course', '$branch', '$dob', '$address', '$path', CURRENT_TIMESTAMP);";
+
+            $result=mysqli_query($conn, $query);
+
+            if ($result) {
+                echo "successfully inserted";
+            }
+            else
+            {
+                echo "not inserted";
+            }
     }
-    
 
 ?>
