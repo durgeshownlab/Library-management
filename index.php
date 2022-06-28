@@ -170,21 +170,7 @@
         <!-- code for dialog modal -->
 
         <div class="dialog-box-container">
-            <div class="dialog-box-heading-form">
-                <div class="dialog-box-title-bar">
-                    <div class="dialog-title-box">
-                        <h3>Add Student</h3>
-                    </div>
-                    <div class="hide-btn-box">
-                        <button onclick="hideDialog()">
-                            <i class="fa fa-close"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="dialog-form-box">
-
-                </div>
-            </div>
+           
         </div>
 
         <!-- code for footer are  -->
@@ -288,7 +274,7 @@
                     type: "POST",
                     data: data,
                     success: function(data){
-                        $(".dialog-form-box").html(data);
+                        $(".dialog-box-container").html(data);
                     }
                 });
             });
@@ -306,7 +292,7 @@
                     type: "POST",
                     data: data,
                     success: function(data){
-                        $(".dialog-form-box").html(data);
+                        $(".dialog-box-container").html(data);
                     }
                 });
             });
@@ -324,7 +310,7 @@
                     type: "POST",
                     data: data,
                     success: function(data){
-                        $(".dialog-form-box").html(data);
+                        $(".dialog-box-container").html(data);
                     }
                 });
             });

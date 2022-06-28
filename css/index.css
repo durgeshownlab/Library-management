@@ -722,6 +722,7 @@
     width: 100%;
     height: 50px;
     margin: 0 auto;
+    padding: 5px 5px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -732,7 +733,7 @@
 
 .dialog-title-box
 {
-    width: 50%;
+    /* width: 50%; */
     height: 100%;
     /* border: 1px solid #fff; */
     display: flex;
@@ -748,7 +749,7 @@
 
 .hide-btn-box
 {
-    width: 50%;
+    /* width: 50%; */
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -911,4 +912,81 @@
     border: none;
     cursor: pointer;
     font-size: large;
+}
+
+.search-bar-box
+{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* border: 1px solid red; */
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px rgba(122, 121, 121, 0.849);
+}
+
+.search-bar-box:hover
+{
+    border: 2px solid var(--primary);
+}
+.search-bar-box:focus-within
+{
+    border: 2px solid var(--primary);
+}
+
+.search-bar-box:focus-within >.search-box button
+{
+    border-left: 2px solid var(--primary);
+}
+
+.search-box
+{
+    height: 100%;
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search-box input
+{
+    height: 100%;
+    padding: 5px 10px;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    outline: none;
+    background-color: #fff;
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+.search-box input::placeholder
+{
+    color: var(--primary);
+    font-size: 1.0rem;
+}
+
+.search-box button
+{
+    height: 100%;
+    width: 40px;
+    border: 0px solid transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    background-color: #fff;
+    color: var(--primary);
+    cursor: pointer;    
+    font-size: 1.1rem;
+}
+
+.search-box button:hover
+{
+    background-color: var(--primary);
+    color: #fff;
+    border-left: 2px solid var(--primary);
 }
